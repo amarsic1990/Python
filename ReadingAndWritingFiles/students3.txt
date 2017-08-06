@@ -1,0 +1,6 @@
+Ivan --> 15
+Jure --> 23
+Božo --> 37
+Ana --> 24
+Ivana --> 29
+Maja --> 27
