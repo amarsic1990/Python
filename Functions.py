@@ -58,6 +58,18 @@ print(square(0))
 print(square(1))
 
 
+def get_students():
+    students = ["mate", "jure"]
+
+    def get_students_titlecase():
+        students_titlecase = []
+        for s in students: students_titlecase.append(s.title())
+        return students_titlecase
+    print(get_students_titlecase())
+
+get_students()
+
+
 def two_power(x, n):
     while n > 1:
         x = square(x)
@@ -272,3 +284,49 @@ print(is_vowel2("e"))
 print(is_vowel2("m"))
 print(is_vowel2("h"))
 print(is_vowel2("a"))
+
+
+# Lambda functions:
+def double(x): return x * x
+
+
+lambda_double = lambda x: x * x
+
+
+print(lambda_double(5))
+print(lambda_double(7))
+
+add = lambda a, b: a + b
+
+print(add(5,2))
+print(add(5,5))
+
+
+# Variable number of arguments:
+def var_args(name ,*args):
+    print(name)
+    print(args)
+
+var_args("Python", "is cool")
+var_args("Python", "is", "cool")
+var_args("Something", range(5))
+
+
+# Keyword arguments
+def var_args(name, **kwargs):
+    print(name)
+    print(kwargs["description"], kwargs["feedback"])
+
+var_args("Python", description = "...", feedback = None)
+var_args("Python", description = "...", feedback = ",,,")
+
+
+# Generator Functions - Yield
+def create_generator():
+    yield 1
+    yield 2
+
+my_gen = create_generator()
+print(next(my_gen))
+print(next(my_gen))
+print(next(my_gen))
