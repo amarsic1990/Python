@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+from urllib.request import urlopen
+
 listMethods = "https://docs.python.org/2/tutorial/datastructures.html"
 import webbrowser
 webbrowser.open(listMethods)
@@ -140,3 +142,14 @@ print(student_names[:])
 print(student_names[:-1])
 print(student_names[::2])
 print(student_names[::-1])
+
+
+with urlopen('http://sixty-north.com/c/t.txt') as story:
+    story_words = []
+    for line in story:
+        line_words = line.decode("utf-8").split()
+        for word in line_words:
+            story_words.append(word)
+            
+print(story_words)
+print(story_words.count("it"))
