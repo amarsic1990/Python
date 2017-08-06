@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 python_course = True
 java_course = False
 

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 #While Loops:
 x = 0
 while x < 10:

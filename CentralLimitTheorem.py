@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from math import sqrt
 import random
 import matplotlib.pyplot as plt

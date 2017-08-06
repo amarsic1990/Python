@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 print(type(3))
 print(type(3.0))
 print(float(3))

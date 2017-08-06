@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # square
 x = 3
 ans = 0

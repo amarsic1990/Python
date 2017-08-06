@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Type hinting:
 def add(a : float, b : float):
     return a + b

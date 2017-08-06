@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 ##### DO NOT MODIFY THESE LINES #####
 # set up data
 booksData = [{"title":"The Arabian Nights (New Deluxe Edition)","author_array":["Muhsin Mahdi", "Husain Haddawy"],"num_chapters":35,"num_pages":560},{"title":"Things Fall Apart","author_array":["Chinua Achebe"],"num_chapters":25,"num_pages":209},{"title":"Pride and Prejudice","author_array":["Jane Austen"],"num_chapters":61,"num_pages":353}]

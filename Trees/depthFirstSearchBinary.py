@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Aug  1 00:03:15 2017
-
-@author: marsic
-"""
 from binaryTreeBetter import *
 
 

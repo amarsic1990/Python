@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 listMethods = "https://docs.python.org/2/tutorial/datastructures.html"
 import webbrowser
 webbrowser.open(listMethods)

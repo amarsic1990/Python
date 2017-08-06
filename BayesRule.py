@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 def pos_test(p0,p1,p2):
     """ Probability of disease
     Args:

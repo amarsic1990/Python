@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 def read_file():
     try:
         f = open("students.txt" ,"r")

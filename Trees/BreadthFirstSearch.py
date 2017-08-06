@@ -1,10 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Aug  1 20:11:59 2017
-
-@author: marsic
-"""
-
 from binaryTreeBetter import *
 
 def breadth_first_search_binary(root, fcn):

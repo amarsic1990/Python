@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 num = 5
 if num == 5: print(num)
 if num: print(num)

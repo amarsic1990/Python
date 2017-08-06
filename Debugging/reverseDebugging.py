@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # This function should reverse the array passed in
 # It has several bugs which you need to fix
 def reverse(arr):

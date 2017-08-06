@@ -1,10 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Mon Jul 31 21:03:58 2017
-
-@author: marsic
-"""
-
 class Binary_tree(object):
     
     

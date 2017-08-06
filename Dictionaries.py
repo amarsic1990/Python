@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 student = {"name": "Jure",
             "student_id":212,
             "feedback": None

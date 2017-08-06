@@ -1,10 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Aug  1 21:49:18 2017
-
-@author: marsic
-"""
-
 from binaryTreeBetter import *
 
 
@@ -32,4 +26,4 @@ def lt6(node):
 def find6(obj):
     return obj.get_value() == 6 
 
-DFS_binary_ordered(n5, find6, lt6)
+print(DFS_binary_ordered(n5, find6, lt6))

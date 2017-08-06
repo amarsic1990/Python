@@ -1,10 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Mon Jul 31 21:20:45 2017
-
-@author: marsic
-"""
-
 class Binary_tree(object):
     
     
@@ -66,10 +60,10 @@ n8.set_left_branch(n6)
 n6.set_left_branch(n7)
 
 
-#print(n5.get_parent())
-#print(n2.get_parent())
-#print(n1.get_parent())
-#print(n4.get_parent())
-#print(n8.get_parent())
-#print(n6.get_parent())
-#print(n7.get_parent())
+print(n5.get_parent())
+print(n2.get_parent())
+print(n1.get_parent())
+print(n4.get_parent())
+print(n8.get_parent())
+print(n6.get_parent())
+print(n7.get_parent())
