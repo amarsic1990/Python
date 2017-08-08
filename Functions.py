@@ -331,3 +331,38 @@ my_gen = create_generator()
 print(next(my_gen))
 print(next(my_gen))
 print(next(my_gen))
+
+
+def banner(message, border = "-"):
+    line = border * len(message)
+    print(line)
+    print(message)
+    print(line)
+
+banner("Hello, World!")
+banner("Hello, World!", "!?_")
+banner("Sun, Moon and Stars", "*")
+banner("Sun, Moon and Stars", border="*")
+banner(border=".", message="Hello from Earth")
+
+
+def add_spam(menu=None):
+    if menu is None:
+        menu = []
+        menu.append("spam")
+
+
+# Global variable
+count = 0
+
+def f():
+    global count
+    for i in range(100):
+        count += 1
+
+print(count)        
+f()
+print(count)
+f()
+print(count)
+
