@@ -151,3 +151,86 @@ now = dt.datetime.now()
 print(now)
 string_now = dt.datetime.strftime(now, '%m/%d/%y %H:%M:%S')
 print(now, "-->", string_now)
+
+
+
+
+f = open('sample_data.csv', 'r')
+[line for line in f]
+
+data_tuples = []
+with open('sample_data.csv', 'r') as f:
+    for line in f:
+        data_tuples.append(line.strip().split(","))
+        
+data_tuples[:10]
+
+data_tuples[0][0]
+
+format_str = '%Y-%m-%d %H:%M:%S'
+for i in range(len(data_tuples)):
+    data_tuples[i][0] = dt.datetime.strptime(data_tuples[i][0], format_str)
+    data_tuples[i][1] = float(data_tuples[i][1])
+
+data_tuples[0][0]
+data_tuples[0][0].hour
+
+data_tuples = [(data_tuples[i][0].hour, data_tuples[i][1]) for i in range(len(data_tuples))]
+data_tuples[:10]
+
+# function
+def get_data(filename):
+    data_tuples = list()
+    with open(filename,'r') as f:
+        for line in f:
+            data_tuples.append(line.strip().split(','))
+    import datetime
+    format_str = "%Y-%m-%d %H:%M:%S"
+    data_tuples = [(datetime.datetime.strptime(x[0],format_str).hour,float(x[1])) for x in data_tuples]
+    return data_tuples    
+
+buckets = {}
+for i in get_data('sample_data.csv'): 
+    if i[0] not in buckets:
+        buckets[i[0]] = [1, i[1]]
+    else:
+        buckets[i[0]][0] += 1
+        buckets[i[0]][1] += i[1]
+        
+buckets
+
+# another way
+buckets = {}
+buckets1 = {}
+for i in  get_data('sample_data.csv'):
+    buckets[i[0]] = buckets.get(i[0], 0) + 1
+for i in  get_data('sample_data.csv'):
+    buckets1[i[0]] = buckets1.get(i[0], 0) + i[1]
+for k in buckets1:
+    buckets[k] = [buckets[k], buckets1[k]]
+
+
+["Hour: " + str(key) + " Average: "+ str(value[1]/value[0]) for key, value in buckets.items()]
+
+
+# function
+def get_hour_bucket_averages(filename):
+    def get_data(filename):
+        data_tuples = list()
+        with open(filename,'r') as f:
+            for line in f:
+                data_tuples.append(line.strip().split(','))
+        import datetime
+        format_str = "%Y-%m-%d %H:%M:%S"
+        data_tuples = [(datetime.datetime.strptime(x[0],format_str).hour,float(x[1])) for x in data_tuples]
+        return data_tuples        
+    buckets = dict()
+    for item in get_data(filename):
+        if item[0] in buckets:
+            buckets[item[0]][0] += 1
+            buckets[item[0]][1] += item[1]
+        else:
+            buckets[item[0]] = [1,item[1]]  
+    return [(key,value[1]/value[0]) for key,value in buckets.items()]
+
+get_hour_bucket_averages('sample_data.csv')
